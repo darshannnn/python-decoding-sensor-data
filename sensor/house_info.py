@@ -1,7 +1,3 @@
-
-from multiprocessing import reduction
-from operator import truediv
-
 from datetime import date, datetime
 
 class HouseInfo:

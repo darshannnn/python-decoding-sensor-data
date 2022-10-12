@@ -23,7 +23,7 @@ print("\nHouse sensor records for area {} = {}".format(test_area, len(recs)))
 
 test_date = datetime.strptime("5/9/20", "%m/%d/%y")
 recs = house_info.get_data_by_date("id", rec_date=test_date)
-print("\nHouse sensor records for date: {} = {}".format(test_date.strftime("%m/%d/%y"), len(recs)))
+print("House sensor records for date {} = {}".format(test_date.strftime("%m/%d/%y"), len(recs)))
 
 # Module 3 code here:
 
