@@ -1,5 +1,5 @@
-from datetime import date
 from house_info import HouseInfo
+from datetime import date
 
 class TemperatureData(HouseInfo):
     def _convert_data(self, data):
@@ -9,11 +9,9 @@ class TemperatureData(HouseInfo):
         return recs
 
     def get_data_by_area(self, rec_area=0):
-        field = 'temperature'
-        recs = super().get_data_by_area(field, rec_area)
-        return recs
+        recs = super().get_data_by_area('temperature', rec_area)
+        return self._convert_data(recs)
 
     def get_data_by_date(self, rec_date=date.today()):
-        field = 'temperature'
-        recs = super().get_data_by_date(field, rec_date)
+        recs = super().get_data_by_date('temperature', rec_date)
         return self._convert_data(recs)
